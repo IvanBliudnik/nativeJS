@@ -193,3 +193,118 @@ console.log(result);
 
 // reduce(function(acc,  item, index) {}, [])
 // reduce(function(acc, item, index) {})//стартовое значение acc a[0] так как не указали его через запятую
+
+//live code
+//1 task
+// let a = [1, 2, 3, 4, 5];
+// let result = a.reduce(function (acc, current) {
+//   //   console.log('acc: ', acc);
+//   //   console.log('current: ', current);
+//   return acc + current;
+// }, 0);
+
+// console.log('result: ', result);//15
+
+//task 2
+// const fruits = [
+//   { name: 'apple', quantity: 2 },
+//   { name: 'banana', quantity: 3 },
+//   { name: 'orange', quantity: 1 },
+// ];
+
+// const totalQuantity = fruits.reduce(function (acc, fruit) {
+//   //   console.log('fruit: ', fruit);
+//   //   console.log('acc: ', acc);
+//   return acc + fruit.quantity;
+// }, 0);
+
+// console.log(totalQuantity);//6
+
+//3
+// const numbers = [5, 6, 7, 10, 6, 7];
+// const maxNumber = numbers.reduce(function (acc, currentNumber) {
+//   //   console.log('currentNumber: ', currentNumber);
+//   //   console.log('acc: ', acc);
+//   return currentNumber > acc ? currentNumber : acc;
+// }, numbers[0]);
+
+// const maxNumber = numbers.reduce(function(acc, currentNumber) {
+
+// }//можем не указывать так как по дефолту возьмет numbers[0]
+
+//4
+
+// const people = [
+//   { name: 'Alice', age: 25 },
+//   { name: 'Bob', age: 30 },
+//   { name: 'Charlie', age: 22 },
+// ]; // {names: [...], totalAges: 0}
+
+// const result = people.reduce(
+//   function (acc, user) {
+//     acc.names.push(user.name);
+//     acc.totalAges += user.age; //acc.totalAges = acc.totalAges + user.age
+//     return acc;
+//   },
+//   { names: [], totalAges: 0 }
+// );
+
+// console.log('result: ', result);//result:  { names: [ 'Alice', 'Bob', 'Charlie' ], totalAges: 77 }
+
+//5
+
+// const people = [
+//   { name: 'Vika', age: 25, budget: 4500 },
+//   { name: 'Nikita', age: 45, budget: 35000 },
+//   { name: 'Igor', age: 55, budget: 340 },
+//   { name: 'Insaf', age: 65, budget: 50000 },
+//   { name: 'Alyona', age: 75, budget: 20 },
+// ]; // ..(number)
+
+// const totalBudget = people.reduce((acc, person) => {
+//   return acc + person.budget;
+// }, 0);
+
+// console.log(totalBudget);//89860
+
+//2
+// const people = [
+//   { name: 'Vika', age: 25, budget: 4500 },
+//   { name: 'Nikita', age: 45, budget: 35000 },
+//   { name: 'Igor', age: 55, budget: 340 },
+//   { name: 'Insaf', age: 65, budget: 50000 },
+//   { name: 'Alyona', age: 75, budget: 20 },
+// ]; //{totalBudget: [89860, ...], names: [....]}
+
+// const result = people.reduce(
+//   (acc, currentValue) => {
+//     acc.totalBudget.push(currentValue.budget);
+//     acc.names.push(currentValue.name);
+//     return acc;
+//   },
+//   { totalBudget: [], names: [] }
+// );
+
+// console.log(result); //{
+// //     totalBudget: [ 4500, 35000, 340, 50000, 20 ],
+// //     names: [ 'Vika', 'Nikita', 'Igor', 'Insaf', 'Alyona' ]
+// //   }
+
+//
+
+// const words = ['Hello', ' ', 'world', '!']; //'Hello world!'
+
+// const result = words.reduce((acc, el) => {
+//   return acc + el;
+// }, '');
+
+// console.log(result); //Hello world!
+
+//
+// const arr = [1, 20, 30, 60, 7, 0]; //min number ; 0
+
+// const minNum = arr.reduce((acc, el) => {
+//   return el < acc ? el : acc;
+// });
+
+// console.log(minNum); //0
